@@ -11,9 +11,9 @@ import (
 // EINVAL Error Code: #define EINVAL          22      /* Invalid argument */
 const EINVAL = 23
 
-const MaxInt32 = 2147483647
-const UnLimitedTime = MaxInt32
-const MissPercentageVal = 0
+const maxInt32 = 2147483647
+const unLimitedTime = maxInt32
+const missPercentageVal = 0
 
 func main() {
 	var coresCount int
@@ -33,13 +33,13 @@ func main() {
 		},
 		cli.IntFlag{
 			Name:        "timeSeconds, t",
-			Value:       UnLimitedTime,
+			Value:       unLimitedTime,
 			Usage:       "how long",
 			Destination: &timeSeconds,
 		},
 		cli.IntFlag{
 			Name:        "percentage, p",
-			Value:       MissPercentageVal,
+			Value:       missPercentageVal,
 			Usage:       "percentage of each specify cores",
 			Destination: &percentage,
 		},

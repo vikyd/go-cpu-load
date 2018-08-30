@@ -31,7 +31,7 @@ go-cpu-load -p 30 -t 10
 ```
 
 - `all CPU load` = (num of para `c` _ num of `p`) / (all cores count of CPU _ 100)
-- may not only specify cores run the load, it just promise the `all CPU load`
+- may not specify cores run the load only, it just promise the `all CPU load`, and not promise each cores run the same load
 
 # Parameters
 
