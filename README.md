@@ -1,5 +1,3 @@
-[![Build Status](https://travis-ci.org/vikyd/go-cpu-load.svg?branch=master)](https://travis-ci.org/vikyd/go-cpu-load)
-
 # go-cpu-load
 
 Generate CPU load on Windows/Linux.
