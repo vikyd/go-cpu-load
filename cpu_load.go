@@ -16,13 +16,14 @@ func RunCPULoad(coresCount int, timeSeconds int, percentage int) {
 
 	// every loop : run + sleep = 1 unit
 
-	// 1 unit = 10 ms may be the best
-	unitHundresOfMicrosecond := 100
+	// 1 unit = 100 ms may be the best
+	unitHundresOfMicrosecond := 1000
 	runMicrosecond := unitHundresOfMicrosecond * percentage
 	sleepMicrosecond := unitHundresOfMicrosecond*100 - runMicrosecond
 	for i := 0; i < coresCount; i++ {
 		go func() {
 			runtime.LockOSThread()
+			// endless loop
 			for {
 				begin := time.Now()
 				for {

@@ -1,6 +1,10 @@
 .idea/
 .vscode/
 test_tmp/
+bin/
+
 debug.test
 debug
-
+.DS_Store
+go-cpu-load
+go-cpu-load.exe

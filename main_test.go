@@ -25,7 +25,7 @@ func Test_allCores(t *testing.T) {
 
 	// run and get pid
 	coresCount := runtime.NumCPU() 
-	percentage := 30
+	percentage := 33
 	pid := startCmd(fmt.Sprintf("%s -c %d -p %d ", exeFilePath, coresCount, percentage))
 
 	// judge
