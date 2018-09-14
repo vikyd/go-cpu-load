@@ -36,7 +36,7 @@ func Test_allCores(t *testing.T) {
 	usageExpect := float64(coresCount*percentage) / float64(runtime.NumCPU()*100) * 100
 	var tolerance float64 = 2
 	for i := 0; i < count; i++ {
-		usageStr := runCmd(fmt.Sprintf("ps -p %f -o %%cpu | tail -n +2"))
+		usageStr := runCmd(fmt.Sprintf("ps -p %d -o %%cpu | tail -n +2", pid))
 		usage, _ := strconv.Atoi(string(usageStr))
 		usageF := float64(usage)
 		sum += math.Pow(float64(math.Abs(usageExpect-usageF)), 2)
