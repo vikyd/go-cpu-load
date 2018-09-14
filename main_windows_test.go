@@ -33,7 +33,7 @@ func Test_allCores(t *testing.T) {
 	count := 5
 	t.Logf("coresCount: %d, percentage: %d", coresCount, percentage)
 	usageExpect := float64(coresCount*percentage) / float64(runtime.NumCPU()*100) * 100
-	var tolerance float64 = 2
+	var tolerance float64 = 3
 	for i := 0; i < count; i++ {
 		usageStr := runCmd(fmt.Sprintf("test_bin\\cpu_usage\\cpu_usage_win.exe %d", pid))
 		usage, _ := strconv.Atoi(string(usageStr))
