@@ -45,6 +45,7 @@ func Test_allCores(t *testing.T) {
 		if err != nil {
 			log.Fatalf("usage return not correct: %s", err.Error())
 		}
+		usage = usage / coresCount
 
 		sum += math.Pow(float64(math.Abs(usageExpect-usage)), 2)
 		t.Logf("usage: %f", usage)
