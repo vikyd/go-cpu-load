@@ -1,6 +1,6 @@
 # go-cpu-load
 
-Generate CPU load on Windows/Linux.
+Generate CPU load on Windows/Linux/Mac.
 
 # Install
 
@@ -27,7 +27,7 @@ go-cpu-load -p 30
 example 03: run 30% of 2 of CPU cores for 10 seconds
 
 ```sh
-go-cpu-load -p 30 -t 10
+go-cpu-load -p 30 -c 2 -t 10
 ```
 
 - `all CPU load` = (num of para `c` _ num of `p`) / (all cores count of CPU _ 100)
