@@ -5,7 +5,7 @@ import (
 	"os"
 	"runtime"
 
-	"github.com/urfave/cli"
+	cli "github.com/urfave/cli/v2"
 )
 
 // EINVAL Error Code: #define EINVAL          22      /* Invalid argument */
@@ -22,23 +22,26 @@ func main() {
 
 	app := cli.NewApp()
 
-	app.Version = "0.0.1"
+	// app.Version = "0.0.2"
 
 	app.Flags = []cli.Flag{
-		cli.IntFlag{
-			Name:        "coresCount, c",
+		&cli.IntFlag{
+			Name:        "coresCount",
+			Aliases:     []string{"c"},
 			Value:       runtime.NumCPU(),
 			Usage:       "how many cores",
 			Destination: &coresCount,
 		},
-		cli.IntFlag{
-			Name:        "timeSeconds, t",
+		&cli.IntFlag{
+			Name:        "timeSeconds",
+			Aliases:     []string{"t"},
 			Value:       unLimitedTime,
 			Usage:       "how long",
 			Destination: &timeSeconds,
 		},
-		cli.IntFlag{
-			Name:        "percentage, p",
+		&cli.IntFlag{
+			Name:        "percentage",
+			Aliases:     []string{"p"},
 			Value:       missPercentageVal,
 			Usage:       "percentage of each specify cores",
 			Destination: &percentage,
